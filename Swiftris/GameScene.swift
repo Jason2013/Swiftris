@@ -16,6 +16,7 @@ class GameScene: SKScene {
     let myFirstNode = SKNode()
     let myFirstSpriteNode = SKSpriteNode(color: .red, size: CGSize(width: 200.0, height: 200.0))
     let myFirstTexturedSpriteNode = SKSpriteNode(imageNamed: "Spaceship")
+    let blueBox = SKSpriteNode(color: .blue, size: CGSize(width: 100.0, height: 100.0))
     
     override func didMove(to view: SKView) {
         addChild(myFirstNode)
@@ -27,6 +28,7 @@ class GameScene: SKScene {
         myFirstTexturedSpriteNode.size = CGSize(width: 100.0, height: 100.0)
         myFirstSpriteNode.addChild(myFirstTexturedSpriteNode)
 
+        myFirstTexturedSpriteNode.addChild(blueBox)
     }
     
     
