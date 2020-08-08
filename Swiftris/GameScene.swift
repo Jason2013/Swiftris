@@ -19,6 +19,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         addChild(myFirstNode)
         
+        myFirstSpriteNode.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(myFirstSpriteNode)
 
     }
