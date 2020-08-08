@@ -15,12 +15,16 @@ class GameScene: SKScene {
 //    private var spinnyNode : SKShapeNode?
     let myFirstNode = SKNode()
     let myFirstSpriteNode = SKSpriteNode(color: .red, size: CGSize(width: 200.0, height: 200.0))
+    let myFirstTexturedSpriteNode = SKSpriteNode(imageNamed: "Spaceship")
     
     override func didMove(to view: SKView) {
         addChild(myFirstNode)
         
         myFirstSpriteNode.position = CGPoint(x: frame.midX, y: frame.midY)
+        myFirstSpriteNode.anchorPoint = CGPoint.zero
         addChild(myFirstSpriteNode)
+        
+        myFirstSpriteNode.addChild(myFirstTexturedSpriteNode)
 
     }
     
