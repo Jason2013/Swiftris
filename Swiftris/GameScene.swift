@@ -14,9 +14,12 @@ class GameScene: SKScene {
 //    private var label : SKLabelNode?
 //    private var spinnyNode : SKShapeNode?
     let myFirstNode = SKNode()
+    let myFirstSpriteNode = SKSpriteNode(color: .red, size: CGSize(width: 200.0, height: 200.0))
     
     override func didMove(to view: SKView) {
         addChild(myFirstNode)
+        
+        addChild(myFirstSpriteNode)
 
     }
     
