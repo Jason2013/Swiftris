@@ -24,6 +24,7 @@ class GameScene: SKScene {
         myFirstSpriteNode.anchorPoint = CGPoint.zero
         addChild(myFirstSpriteNode)
         
+        myFirstTexturedSpriteNode.size = CGSize(width: 100.0, height: 100.0)
         myFirstSpriteNode.addChild(myFirstTexturedSpriteNode)
 
     }
