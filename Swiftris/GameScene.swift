@@ -30,6 +30,7 @@ class GameScene: SKScene {
         myFirstSpriteNode.addChild(myFirstTexturedSpriteNode)
 
         blueBox.zPosition = 2
+        blueBox.position = CGPoint(x: myFirstSpriteNode.size.width/2, y: myFirstSpriteNode.size.height/2)
         myFirstTexturedSpriteNode.addChild(blueBox)
     }
     
