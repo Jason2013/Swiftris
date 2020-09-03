@@ -14,8 +14,8 @@ jobs:
     - name: Prepare Provisioning Profiles
       run: |
         echo "*** before copy provisioning files"
-        ls -l ~/Library/MobileDevice/Provisioning\ Profiles
-        cp provisioning/* ~/Library/MobileDevice/Provisioning\ Profiles/
+        #ls -l ~/Library/MobileDevice/Provisioning\ Profiles
+        ditto provisioning/* ~/Library/MobileDevice/Provisioning\ Profiles/
         echo "*** after copy provisioning files"
         ls -l ~/Library/MobileDevice/Provisioning\ Profiles
 # /Users/chenchang/Library/MobileDevice/Provisioning Profiles*: No such file or directory
