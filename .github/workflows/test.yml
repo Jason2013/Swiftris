@@ -26,6 +26,7 @@ jobs:
         security unlock-keychain -p "" ~/Library/Keychains/build.keychain
 
         security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+
 # /Users/chenchang/Library/MobileDevice/Provisioning Profiles*: No such file or directory
 #chenchang@chenchangdeiMac Swiftris % cp ~/Library/MobileDevice/Provisioning\ Profiles/* provisioning
 #chenchang@chenchangdeiMac Swiftris % ls -l provisioning 
