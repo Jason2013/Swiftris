@@ -27,6 +27,7 @@ jobs:
         security unlock-keychain -p "" ~/Library/Keychains/build.keychain
 
         security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+        security find-identity -v -p codesigning
 
 #-rw-r--r--  1 chenchang  staff  3261  9  4 07:03 Certificates.p12
 #-rw-r--r--  1 chenchang  staff  3261  9  4 07:00 Untitled.p12
