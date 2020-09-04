@@ -28,11 +28,11 @@ jobs:
 
         security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
 
--rw-r--r--  1 chenchang  staff  3261  9  4 07:03 Certificates.p12
--rw-r--r--  1 chenchang  staff  3261  9  4 07:00 Untitled.p12
--rw-r--r--  1 chenchang  staff  7438  9  4 06:38 app.mobileprovision
--rw-r--r--  1 chenchang  staff  7438  9  4 06:30 ffa23e17-ffc0-4bd3-9558-8b2b561ac12e.mobileprovision
--rw-r--r--  1 chenchang  staff     0  9  4 06:38 xx
+#-rw-r--r--  1 chenchang  staff  3261  9  4 07:03 Certificates.p12
+#-rw-r--r--  1 chenchang  staff  3261  9  4 07:00 Untitled.p12
+#-rw-r--r--  1 chenchang  staff  7438  9  4 06:38 app.mobileprovision
+#-rw-r--r--  1 chenchang  staff  7438  9  4 06:30 ffa23e17-ffc0-4bd3-9558-8b2b561ac12e.mobileprovision
+#-rw-r--r--  1 chenchang  staff     0  9  4 06:38 xx
 
 # /Users/chenchang/Library/MobileDevice/Provisioning Profiles*: No such file or directory
 #chenchang@chenchangdeiMac Swiftris % cp ~/Library/MobileDevice/Provisioning\ Profiles/* provisioning
