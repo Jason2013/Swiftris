@@ -14,6 +14,20 @@ jobs:
     - name: Prepare Provisioning Profiles
       run: |
         echo "*** before copy provisioning files"
+#Options:
+#  -h, --help                  print this help message and exit
+#  -p, --print-path            print the path of the active developer directory
+#  -s <path>, --switch <path>  set the path for the active developer directory
+#  --install                   open a dialog for installation of the command line developer tools
+#  -v, --version               print the xcode-select version
+#  -r, --reset                 reset to the default command line tools path
+#chenchang@chenchangdeiMac Resources % xcode-select -p   
+        echo "*** print the xcode-select version"
+        xcode-select --version
+        echo "*** print the path for the active developer directory"
+        xcode-select --print-path
+        echo "*** print a list of available destinations you can use to build and run Xcode unit tests"
+        instruments -s devices
         #ls -l ~/Library/MobileDevice/Provisioning\ Profiles
         ditto provisioning/app.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
         echo "*** after copy provisioning files"
@@ -71,3 +85,8 @@ jobs:
 #        issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
 #        api-key-id: ${{ secrets.APPSTORE_KEY_ID }}
 #        api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
+    - name: Test
+      run: |
+          xcodebuild test-without-building -scheme Swiftris -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=latest" -only-testing SwiftrisTests/testExample
+          xcodebuild test-without-building -scheme Swiftris -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=latest" -only-testing SwiftrisUITests/testExample
+
