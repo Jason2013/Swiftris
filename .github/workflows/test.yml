@@ -14,15 +14,6 @@ jobs:
     - name: Prepare Provisioning Profiles
       run: |
         echo "*** before copy provisioning files"
-#Options:
-#  -h, --help                  print this help message and exit
-#  -p, --print-path            print the path of the active developer directory
-#  -s <path>, --switch <path>  set the path for the active developer directory
-#  --install                   open a dialog for installation of the command line developer tools
-#  -v, --version               print the xcode-select version
-#  -r, --reset                 reset to the default command line tools path
-#chenchang@chenchangdeiMac Resources % xcode-select -p   
-#
         echo "*** print the xcode-select version"
         xcode-select --version
         echo "*** print the path for the active developer directory"
