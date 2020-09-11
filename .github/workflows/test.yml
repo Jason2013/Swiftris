@@ -35,6 +35,9 @@ jobs:
         security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
         security find-identity -v -p codesigning
 
+        xcode -list -project Swiftris.xcodeproj
+        xcode -list -workspace Swiftris.xcodeproj/project.xcworkspace
+
 #-rw-r--r--  1 chenchang  staff  3261  9  4 07:03 Certificates.p12
 #-rw-r--r--  1 chenchang  staff  3261  9  4 07:00 Untitled.p12
 #-rw-r--r--  1 chenchang  staff  7438  9  4 06:38 app.mobileprovision
