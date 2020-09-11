@@ -16,6 +16,7 @@ jobs:
         man xcodebuild | col -bx > xcodebuild_man.txt
         info xcodebuild > xcodebuild_info.txt
         xcodebuild -help > xcodebuild_help.txt
+        man -t xcodebuild | ps2pdf - xcodebuild.pdf
     - uses: actions/upload-artifact@v2
       with:
         name: xcodebuild_doc
@@ -23,6 +24,7 @@ jobs:
           xcodebuild_man.txt
           xcodebuild_info.txt
           xcodebuild_help.txt
+          xcodebuild.pdf
     - name: Prepare Provisioning Profiles
       run: |
         echo "*** before copy provisioning files"
