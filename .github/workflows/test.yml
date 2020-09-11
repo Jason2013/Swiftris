@@ -56,7 +56,8 @@ jobs:
     - name: Build
       run: |
         xcodebuild clean
-        xcodebuild
+        #xcodebuild -scheme Swiftris build
+        xcodebuild build-for-testing -scheme Swiftris -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=13.7'
 
 #    - uses: Apple-Actions/import-codesign-certs@v1
 #      with:
