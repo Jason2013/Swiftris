@@ -13,9 +13,16 @@ jobs:
     - uses: actions/checkout@v2
     - name: Show information
       run: |
-        man xcodebuild
-        info xcodebuild
-        xcodebuild --help
+        man xcodebuild > xcodebuild_man.txt
+        info xcodebuild > xcodebuild_info.txt
+        xcodebuild --help > xcodebuild_help.txt
+    - uses: actions/upload-artifact@v2
+      with:
+        name: xcodebuild_doc
+        path: |
+          xcodebuild_man.txt
+          xcodebuild_info.txt
+          xcodebuild_help.txt
     - name: Prepare Provisioning Profiles
       run: |
         echo "*** before copy provisioning files"
