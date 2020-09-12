@@ -16,7 +16,6 @@ jobs:
         man xcodebuild | col -bx > xcodebuild_man.txt
         info xcodebuild > xcodebuild_info.txt
         xcodebuild -help > xcodebuild_help.txt
-#        man -t xcodebuild | ps2pdf - xcodebuild.pdf
     - uses: actions/upload-artifact@v2
       with:
         name: xcodebuild_doc
