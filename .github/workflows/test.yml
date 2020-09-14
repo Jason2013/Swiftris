@@ -68,8 +68,12 @@ jobs:
 #
     - name: Build
       run: |
-        #/* xcodebuild clean -scheme */
-        xcodebuild -scheme Swiftris
+        xcodebuild clean -scheme Swiftris
+        xcodebuiid -showsdks
+        xcodebuiid -showBuildSettings -scheme Swiftris
+        xcodebuiid -showdestinations -scheme Swiftris
+        xcodebuiid -showTestPlans -scheme Swiftris
+        #xcodebuild -scheme Swiftris
 
     - name: Test
       run: |
