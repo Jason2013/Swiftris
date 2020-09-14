@@ -69,10 +69,10 @@ jobs:
     - name: Build
       run: |
         xcodebuild clean -scheme Swiftris
-        xcodebuiid -showsdks
-        xcodebuiid -showBuildSettings -scheme Swiftris
-        xcodebuiid -showdestinations -scheme Swiftris
-        xcodebuiid -showTestPlans -scheme Swiftris
+        xcodebuild -showsdks
+        xcodebuild -showBuildSettings -scheme Swiftris
+        xcodebuild -showdestinations -scheme Swiftris
+        xcodebuild -showTestPlans -scheme Swiftris
         #xcodebuild -scheme Swiftris
 
     - name: Test
