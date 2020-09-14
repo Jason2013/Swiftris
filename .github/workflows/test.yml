@@ -73,7 +73,7 @@ jobs:
         xcodebuild -showBuildSettings -scheme Swiftris
         xcodebuild -showdestinations -scheme Swiftris
         xcodebuild -showTestPlans -scheme Swiftris
-        #xcodebuild -scheme Swiftris
+        xcodebuild -scheme Swiftris
 
     - name: Test
       run: |
